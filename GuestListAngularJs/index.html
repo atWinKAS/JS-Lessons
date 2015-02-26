@@ -1,41 +1,47 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="GuestsApp">
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bootstrap/3.3.0/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="style.css">
+
     <script src="https://code.jquery.com/jquery-2.1.3.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/2.4.1/lodash.min.js"></script>
+    <script src="angular.js"></script>
 
-    <script src="index.js"></script>
+    <script src="app.js"></script>
 
 </head>
-<body>
+<body ng-controller="GuestsController">
 <div class="col-xs-12">
     <h1>Список гостей</h1>
 </div>
 <div class="col-xs-4 invited">
     <h2>Приглашены</h2>
 
-    <div class="item">
+
+
+    <div class="item" ng-repeat="el in elements | filter: {inHall: false}" >
+        <div ng-click="moveInHall(el)">
         <div class="close">
-            <a class="btn btn-danger" href="#" role="button"><span class="glyphicon glyphicon-remove"></span></a>
+            <a class="btn btn-danger" href="#" role="button" ng-click="removeGuest(el.id)"><span class="glyphicon glyphicon-remove"></span></a>
         </div>
-        Иванов Иван
-    </div>
-    <div class="item">
-        <div class="close"><a class="btn btn-danger" href="#" role="button"><span class="glyphicon glyphicon-remove"></span></a></div>
-        Иванов Иван
+        {{ el.name }}
+        </div>
     </div>
 
 </div>
 <div class="col-xs-4 in-hall">
     <h2>В зале</h2>
-    <div class="item">Иванов Иван</div>
-    <div class="item">Иванов Иван</div>
+    <div class="item" ng-repeat="el in elements | filter: {inHall: true}">
+        <div ng-click="moveFromHall(el)">
+        {{ el.name }}
+        </div>
+    </div>
+
 </div>
 <div class="col-xs-4">
     <h2>Новый гость</h2>
@@ -44,9 +50,9 @@
         <form role="form">
             <div class="form-group">
                 <label for="name">Имя гостя</label>
-                <input type="text" id="name" class="form-control" name="name" placeholder="Имя гостя"/>
+                <input type="text" id="name" class="form-control" name="name" placeholder="Имя гостя" ng-model="newGuestName"/>
             </div>
-            <button type="submit" id="addGuest" class="btn btn-default">Добавить</button>
+            <button type="submit" id="addGuest" class="btn btn-default" ng-click="addGuest()">Добавить</button>
         </form>
     </div>
 </div>
