@@ -1,0 +1,240 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  width: 1170px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.navbar {
+  position: relative;
+  min-height: 50px;
+  margin-bottom: 20px;
+  background-color: #222;
+}
+
+.navbar > a {
+  float: left;
+  color: lightgrey;
+  padding: 15px 15px;
+  font-size: 18px;
+  line-height: 20px;
+  height: 50px;
+}
+
+.navbar ul {
+  float: left;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar ul li {
+  float: left;
+  position: relative;
+  display: block;
+}
+
+.navbar ul li a {
+  color: white;
+  position: relative;
+  display: block;
+  padding: 15px;
+  line-height: 20px;
+}
+
+.navbar ul li.active a {
+  background-color: black;
+}
+
+.jumbotron {
+  padding: 60px;
+  margin-bottom: 30px;
+  background-color: gainsboro;
+  border-radius: 6px;
+  text-align: center;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  cursor: pointer;
+  border: 1px solid transparent;
+  color: white;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.33;
+  border-radius: 6px;
+}
+
+.col {
+  float: left;
+  width: 33.33%;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+  box-sizing: border-box;
+}
+
+.col .thumbnail {
+  height: 200px;
+  border: 1px solid lightgrey;
+  border-radius: 4px;
+  margin-bottom: 20px;
+}
+
+.col .thumbnail .caption {
+  padding: 9px;
+}
+
+.col .thumbnail img.pull-right {
+  width: 50px;
+}
+
+.pull-right {
+  float: right;
+}
+
+hr {
+  clear: both;
+}
+
+.b-carousel--wrapper {
+  height: 440px;
+  position: relative;
+  display: block;
+}
+
+.b-carousel {
+  display: block;
+  height: 100%;
+  position: absolute;
+  overflow: hidden;
+  width: 100vw;
+}
+.b-carousel__box {
+  position: absolute;
+  height: 400px;
+  width: 100%;
+}
+.b-carousel__box__slide {
+  top: 50%;
+  position: absolute;
+  transition: transform 4.5s, left 4.5s , margin-top 4.5s;
+  transition-timing-function: ease;
+  transform: translateX(-50%) translateY(-50%);
+}
+.b-carousel__box__slide__0 {
+  margin-top: 68px;
+  left: calc(50% - 728px);
+  transform: translateX(-50%) translateY(-50%) scale(0.6);
+  z-index: 1;
+}
+.b-carousel__box__slide__1 {
+  margin-top: 34px;
+  left: calc(50% - 532px);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  z-index: 2;
+}
+.b-carousel__box__slide__2 {
+  left: calc(50% - 280px);
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  z-index: 3;
+}
+.b-carousel__box__slide__3 {
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  z-index: 4;
+}
+.b-carousel__box__slide__4 {
+  left: calc(50% + 280px);
+  transform: translateX(-50%) translateY(-50%) scale(1);
+  z-index: 5;
+}
+.b-carousel__box__slide__5 {
+  margin-top: 34px;
+  left: calc(50% + 532px);
+  transform: translateX(-50%) translateY(-50%) scale(0.8);
+  z-index: 6;
+}
+.b-carousel__box__slide__6 {
+  margin-top: 68px;
+  left: calc(50% + 728px);
+  transform: translateX(-50%) translateY(-50%) scale(0.6);
+  z-index: 7;
+}
+.b-carousel-card {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #15808E;
+  box-shadow: -2px 39px 71px -23px rgba(0, 0, 0, 0.41);
+  width: 270px;
+  height: 340px;
+}
+.b-carousel-card__content {
+  width: 270px;
+  height: 100%;
+  position: relative;
+}
+.b-carousel-card__content-image {
+  position: absolute;
+  left: 100px;
+  top: 60px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  background-color: white;
+  overflow: hidden;
+  border: solid white 3px;
+}
+.b-carousel-card__content-image img {
+  width: 100%;
+  height: 100%;
+}
+.b-carousel-card__content-text {
+  position: absolute;
+  top: 150px;
+  width: 100%;
+  color: #ffffff;
+}
+.b-carousel-card__content-text-title {
+  font-size: 20px;
+  padding: 0 10px;
+  font-weight: 600;
+  text-align: center;
+  margin: 0;
+}
+.b-carousel-card__content-text-description {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
+}
+.b-carousel-card__content-text-address {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 16px;
+  padding: 0 10px;
+  font-weight: 300;
+  text-align: center;
+}
