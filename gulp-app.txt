@@ -1,0 +1,16 @@
+#JS Angular Course - right way to develop javascript + angular
+git
+node
+grunt / gulp
+#package manager for frontend
+bower
+#package manager for node
+npm
+#install packages
+npm i -g yo generator-gulp-angular gulp
+#after creating project dir
+yo gulp-angular newApp
+#execute project in node with all sweetc
+gulp serve
+#to build project and put into dist catalog
+gulp build
