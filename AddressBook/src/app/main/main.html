@@ -5,9 +5,9 @@
   <div class="row">
 	<div class="col-md-4">
 	<div ng-repeat="man in people">
-      <div class="thumbnail" ng-click="showMan({{man.id}})">
-        <div class="caption">
-          <p>{{man.firstName}} {{man.lastName}}</p>
+      <div class="thumbnail" ng-click="showMan(man.id)">
+        <div class="caption">          
+		  <p>{{man.firstName}} {{man.lastName}}</p>
           <p>{{man.email}}</p>
 		  <p>{{man.phone}}</p>
         </div>
@@ -21,12 +21,15 @@
  
 		<form class="form-horizontal" name="editForm">
 <fieldset>
+<div>
+	Id: {{ currentMan.id }}
+</div>
 
 <!-- Text input-->
 <div class="control-group">
   <label class="control-label" for="textinput">First Name</label>
   <div class="controls">
-    <input id="textinput" type="text" name="firstName" ng-model="currentMan.firstName" ng-blur="saveFirstName()" placeholder="placeholder" class="input-xlarge">
+    <input id="textinput" type="text" name="firstName" ng-model="currentMan.firstName" ng-blur="saveMan()" placeholder="placeholder" class="input-xlarge">
   </div>
 </div>
 
