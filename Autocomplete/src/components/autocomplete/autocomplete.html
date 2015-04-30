@@ -1,0 +1,7 @@
+<div>
+	<input type="text" class="form-control" id="searchinput" ng-model="searchText" ng-change="search()"placeholder="Search Here">
+	
+	<ul>
+		<li ng-repeat="t in terms track by $index" ng-click="selectTerm($index)">{{t}}</li>
+	</ul>
+</div>
