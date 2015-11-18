@@ -1,0 +1,22 @@
+﻿<div class="b-carousel--wrapper">
+  <div class="b-carousel">
+    <div class="b-carousel__box">
+      <div class="b-carousel__box__slide b-carousel__box__slide__{{card.itemIndex}}" ng-repeat="card in cards">
+        <div class="b-carousel-card">
+          <div class="b-carousel-card__content" ng-style="{
+            backgroundColor: '#' + card.color,
+            backgroundSize: 'cover',
+            backgroundImage: card.backgroundImage ? 'url(\'' + card.backgroundImage + '\')' : ''
+        }">
+            <div class="b-carousel-card__content-image"><img ng-src="{{card.icon}}"></div>
+            <div class="b-carousel-card__content-text">
+              <p class="b-carousel-card__content-text-title">{{card.displayName}}</p>
+              <p class="b-carousel-card__content-text-address">{{card.location}}</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

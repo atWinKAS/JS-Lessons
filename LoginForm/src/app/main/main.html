@@ -1,0 +1,72 @@
+<div class="container">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
+  <div class="row">
+  
+  
+ <form class="form-horizontal" name="loginForm">
+ <div class="form-group">
+	<div class="col-sm-6 col-md-4">
+		<input type="email" placeholder="email" ng-model="userEmail" ng-blur="validateEmail()" name="userEmail" email-validation ng-model-options="{ updateOn: 'default', debounce: {'default': 250, 'blur': 0}}" />		
+		<div class="error" ng-hide="userEmailResult">
+			*ERROR
+		</div>
+		</div>
+	</div>
+</div>
+<div class="form-group">	
+	<div class="col-sm-6 col-md-4">
+		<input type="password" placeholder="password" name="userPassword1" />
+	</div>
+	</div>
+	<div class="form-group">
+	<div class="col-sm-6 col-md-4">
+		<input type="password" placeholder="confirm password" name="userPassword2" />
+	</div>
+	</div>
+	<div>
+	 	<input type="button" ng-click="testAction()" value="Login" /> 
+	</div>
+  </form>
+  </div>
+  <!--
+  <div class="row">
+  <div class="form-group has-success has-feedback">
+  <label class="control-label" for="inputSuccess2">Input with success</label>
+  <input type="text" class="form-control" id="inputSuccess2" aria-describedby="inputSuccess2Status">
+  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  <span id="inputSuccess2Status" class="sr-only">(success)</span>
+</div>
+<div class="form-group has-warning has-feedback">
+  <label class="control-label" for="inputWarning2">Input with warning</label>
+  <input type="text" class="form-control" id="inputWarning2" aria-describedby="inputWarning2Status">
+  <span class="glyphicon glyphicon-warning-sign form-control-feedback" aria-hidden="true"></span>
+  <span id="inputWarning2Status" class="sr-only">(warning)</span>
+</div>
+<div class="form-group has-error has-feedback">
+  <label class="control-label" for="inputError2">Input with error</label>
+  <input type="text" class="form-control" id="inputError2" aria-describedby="inputError2Status">
+  <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+  <span id="inputError2Status" class="sr-only">(error)</span>
+</div>
+<div class="form-group has-success has-feedback">
+  <label class="control-label" for="inputGroupSuccess1">Input group with success</label>
+  <div class="input-group">
+    <span class="input-group-addon">@</span>
+    <input type="text" class="form-control" id="inputGroupSuccess1" aria-describedby="inputGroupSuccess1Status">
+  </div>
+  <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+  <span id="inputGroupSuccess1Status" class="sr-only">(success)</span>
+</div>
+  </div>
+  -->
+  </div>
+  
+  <hr>
+
+  <div class="footer">
+    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+  </div>
+
+</div>

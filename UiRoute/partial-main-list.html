@@ -1,0 +1,52 @@
+<div>
+<div class="jumbotron text-center">
+    <h1>List</h1>
+    <p>{{role}}</p>
+</div>
+
+    <div class="col-xs-12">
+        <h1>Список гостей</h1>
+    </div>
+
+    <div class="col-xs-4 invited">
+        <h2>Приглашены</h2>
+
+
+
+        <div class="item" ng-repeat="el in elements | filter: {inHall: false}" >
+            <div ng-click="moveInHall(el)">
+                <div class="close">
+                    <a class="btn btn-danger" href="#" role="button" ng-click="removeGuest(el.id)"><span class="glyphicon glyphicon-remove"></span></a>
+                </div>
+                {{ el.name }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-xs-4 in-hall">
+        <h2>В зале</h2>
+        <div class="item" ng-repeat="el in elements | filter: {inHall: true}">
+            <div ng-click="moveFromHall(el)">
+                {{ el.name }}
+            </div>
+        </div>
+
+    </div>
+
+    <div class="col-xs-4">
+        <h2>Новый гость</h2>
+
+        <div class="item">
+            <form role="form">
+                <div class="form-group">
+                    <label for="name">Имя гостя</label>
+                    <input type="text" id="name" class="form-control" name="name" placeholder="Имя гостя" ng-model="newGuestName"/>
+                </div>
+                <button type="submit" id="addGuest" class="btn btn-default" ng-click="addGuest()">Добавить</button>
+            </form>
+        </div>
+    </div>
+
+
+</div>

@@ -1,0 +1,82 @@
+<div class="container">
+
+  <div ng-include="'components/navbar/navbar.html'"></div>
+
+  <div class="row">
+	<div class="col-md-4">
+	<div ng-repeat="man in people">
+      <div class="thumbnail" ng-click="showMan(man.id)">
+        <div class="caption">          
+		  <p>{{man.firstName}} {{man.lastName}}</p>
+          <p>{{man.email}}</p>
+		  <p>{{man.phone}}</p>
+        </div>
+      </div>
+    </div>
+	<div>
+		<button ng-click="addMan()">+</button>
+	</div>
+	</div>
+    <div class="col-md-4">
+ 
+		<form class="form-horizontal" name="editForm">
+<fieldset>
+<div>
+	Id: {{ currentMan.id }}
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">First Name</label>
+  <div class="controls">
+    <input id="textinput" type="text" name="firstName" ng-model="currentMan.firstName" ng-blur="saveMan()" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Last Name</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" ng-model="currentMan.lastName" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Email</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" ng-model="currentMan.email" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Text input-->
+<div class="control-group">
+  <label class="control-label" for="textinput">Phone</label>
+  <div class="controls">
+    <input id="textinput" name="textinput" type="text" ng-model="currentMan.phone" placeholder="placeholder" class="input-xlarge">
+  </div>
+</div>
+
+<!-- Button (Double) -->
+<div class="control-group">
+  <div class="controls">
+    <button id="button2id" name="button2id" ng-click="deleteMan()" class="btn btn-danger">Delete</button>
+  </div>
+</div>
+
+</fieldset>
+</form>
+
+ 
+	</div>
+	
+    
+  </div>
+
+  <hr>
+
+  <div class="footer">
+    <p>With ♥ from <a href="https://twitter.com/Swiip">@Swiip</a></p>
+  </div>
+
+</div>
